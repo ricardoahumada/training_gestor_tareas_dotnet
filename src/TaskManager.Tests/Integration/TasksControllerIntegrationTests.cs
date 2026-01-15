@@ -39,6 +39,9 @@ namespace TaskManager.Tests.Integration
                         {
                             options.UseInMemoryDatabase("TestTaskManagerDb");
                         });
+
+                        // Asegurarse de que IMemoryCache esté registrado
+                        services.AddMemoryCache();
                     });
                 });
 
