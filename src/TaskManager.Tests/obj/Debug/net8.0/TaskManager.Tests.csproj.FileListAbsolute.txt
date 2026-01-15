@@ -1,0 +1,6 @@
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_TaskManager.Tests
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Tests\obj\Debug\net8.0\TaskManager.Tests.csproj.AssemblyReference.cache
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Tests\obj\Debug\net8.0\TaskManager.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Tests\obj\Debug\net8.0\TaskManager.Tests.AssemblyInfoInputs.cache
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Tests\obj\Debug\net8.0\TaskManager.Tests.AssemblyInfo.cs
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Tests\obj\Debug\net8.0\TaskManager.Tests.csproj.CoreCompileInputs.cache

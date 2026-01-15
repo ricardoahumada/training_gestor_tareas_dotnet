@@ -1,0 +1,15 @@
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.csproj.AssemblyReference.cache
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.AssemblyInfoInputs.cache
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.AssemblyInfo.cs
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.csproj.CoreCompileInputs.cache
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\bin\Debug\net8.0\TaskManager.Application.deps.json
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\bin\Debug\net8.0\TaskManager.Application.dll
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\bin\Debug\net8.0\TaskManager.Application.pdb
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\bin\Debug\net8.0\TaskManager.Domain.dll
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\bin\Debug\net8.0\TaskManager.Domain.pdb
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskMana.898BD9DB.Up2Date
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.dll
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\refint\TaskManager.Application.dll
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\TaskManager.Application.pdb
+D:\Shared\MyTrainingRepos\gestor_tareas_dotnet\src\TaskManager.Application\obj\Debug\net8.0\ref\TaskManager.Application.dll
