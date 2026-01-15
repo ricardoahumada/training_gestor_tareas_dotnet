@@ -1,0 +1,6 @@
+{
+  "TaskManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api",
+  "TaskManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application",
+  "TaskManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain",
+  "TaskManager.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure"
+}

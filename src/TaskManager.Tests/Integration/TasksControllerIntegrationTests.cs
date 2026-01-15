@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
+using Xunit;
 using TaskManager.Api;
 using TaskManager.Infrastructure.Data;
 using TaskManager.Tests.Fixtures;
@@ -10,7 +12,7 @@ namespace TaskManager.Tests.Integration
     /// <summary>
     /// Tests de integración para TasksController.
     /// </summary>
-    public class TasksControllerIntegrationTests : IClassFixture<TestDatabaseFixture>
+    public class TasksControllerIntegrationTests : IClassFixture<TestDatabaseFixture>, IDisposable
     {
         private readonly WebApplicationFactory<Program> _factory;
         private readonly TestDatabaseFixture _databaseFixture;
@@ -110,9 +112,18 @@ namespace TaskManager.Tests.Integration
             Assert.Equal(System.Net.HttpStatusCode.BadRequest, response.StatusCode);
         }
 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _factory.Dispose();
+            }
+        }
+
         public void Dispose()
         {
-            _factory.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

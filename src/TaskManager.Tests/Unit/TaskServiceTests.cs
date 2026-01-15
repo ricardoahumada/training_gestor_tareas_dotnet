@@ -2,11 +2,14 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Moq;
+using Xunit;
 using TaskManager.Application.DTOs;
 using TaskManager.Application.Services;
 using TaskManager.Domain.Entities;
 using TaskManager.Domain.Enums;
 using TaskManager.Domain.Interfaces;
+using TaskEntity = TaskManager.Domain.Entities.Task;
+using TaskStatusEnum = TaskManager.Domain.Enums.TaskStatus;
 
 namespace TaskManager.Tests.Unit
 {
@@ -42,7 +45,7 @@ namespace TaskManager.Tests.Unit
         }
 
         [Fact]
-        public async Task CreateAsync_WithValidRequest_ShouldCreateTask()
+        public async System.Threading.Tasks.Task CreateAsync_WithValidRequest_ShouldCreateTask()
         {
             // Arrange
             var request = new CreateTaskRequest
@@ -60,8 +63,8 @@ namespace TaskManager.Tests.Unit
             _userRepositoryMock.Setup(x => x.ExistsAsync(It.IsAny<Guid>()))
                 .ReturnsAsync(true);
 
-            _taskRepositoryMock.Setup(x => x.AddAsync(It.IsAny<Domain.Entities.Task>()))
-                .ReturnsAsync((Domain.Entities.Task t) => t);
+            _taskRepositoryMock.Setup(x => x.AddAsync(It.IsAny<TaskEntity>()))
+                .ReturnsAsync((TaskEntity t) => t);
 
             _unitOfWorkMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
                 .ReturnsAsync(1);
@@ -72,13 +75,13 @@ namespace TaskManager.Tests.Unit
             // Assert
             Assert.NotNull(result);
             Assert.Equal("Test Task", result.Title);
-            Assert.Equal(TaskStatus.Pending, result.Status);
-            _taskRepositoryMock.Verify(x => x.AddAsync(It.IsAny<Domain.Entities.Task>()), Times.Once);
+            Assert.Equal(TaskStatusEnum.Pending, result.Status);
+            _taskRepositoryMock.Verify(x => x.AddAsync(It.IsAny<TaskEntity>()), Times.Once);
             _unitOfWorkMock.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
         }
 
         [Fact]
-        public async Task CreateAsync_WithNonExistentProject_ShouldThrowException()
+        public async System.Threading.Tasks.Task CreateAsync_WithNonExistentProject_ShouldThrowException()
         {
             // Arrange
             var request = new CreateTaskRequest
@@ -96,7 +99,7 @@ namespace TaskManager.Tests.Unit
         }
 
         [Fact]
-        public async Task CreateAsync_WithPastDueDate_ShouldThrowException()
+        public async System.Threading.Tasks.Task CreateAsync_WithPastDueDate_ShouldThrowException()
         {
             // Arrange
             var request = new CreateTaskRequest
@@ -111,15 +114,15 @@ namespace TaskManager.Tests.Unit
         }
 
         [Fact]
-        public async Task GetByIdAsync_WithExistingTask_ShouldReturnTask()
+        public async System.Threading.Tasks.Task GetByIdAsync_WithExistingTask_ShouldReturnTask()
         {
             // Arrange
             var taskId = Guid.NewGuid();
-            var task = new Domain.Entities.Task
+            var task = new TaskEntity
             {
                 Id = taskId,
                 Title = "Test Task",
-                Status = TaskStatus.Pending,
+                Status = TaskStatusEnum.Pending,
                 Priority = TaskPriority.Medium,
                 CreatedByUserId = Guid.NewGuid(),
                 CreatedAt = DateTime.UtcNow
@@ -138,12 +141,12 @@ namespace TaskManager.Tests.Unit
         }
 
         [Fact]
-        public async Task GetByIdAsync_WithNonExistingTask_ShouldReturnNull()
+        public async System.Threading.Tasks.Task GetByIdAsync_WithNonExistingTask_ShouldReturnNull()
         {
             // Arrange
             var taskId = Guid.NewGuid();
             _taskRepositoryMock.Setup(x => x.GetByIdAsync(taskId))
-                .ReturnsAsync((Domain.Entities.Task?)null);
+                .ReturnsAsync((TaskEntity?)null);
 
             // Act
             var result = await _taskService.GetByIdAsync(taskId);
@@ -153,15 +156,15 @@ namespace TaskManager.Tests.Unit
         }
 
         [Fact]
-        public async Task UpdateStatusAsync_WithValidTransition_ShouldUpdateStatus()
+        public async System.Threading.Tasks.Task UpdateStatusAsync_WithValidTransition_ShouldUpdateStatus()
         {
             // Arrange
             var taskId = Guid.NewGuid();
-            var task = new Domain.Entities.Task
+            var task = new TaskEntity
             {
                 Id = taskId,
                 Title = "Test Task",
-                Status = TaskStatus.Pending,
+                Status = TaskStatusEnum.Pending,
                 Priority = TaskPriority.Medium,
                 CreatedByUserId = Guid.NewGuid(),
                 CreatedAt = DateTime.UtcNow
@@ -169,30 +172,30 @@ namespace TaskManager.Tests.Unit
 
             _taskRepositoryMock.Setup(x => x.GetByIdAsync(taskId))
                 .ReturnsAsync(task);
-            _taskRepositoryMock.Setup(x => x.UpdateAsync(It.IsAny<Domain.Entities.Task>()))
-                .ReturnsAsync((Domain.Entities.Task t) => t);
+            _taskRepositoryMock.Setup(x => x.UpdateAsync(It.IsAny<TaskEntity>()))
+                .ReturnsAsync((TaskEntity t) => t);
             _unitOfWorkMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
                 .ReturnsAsync(1);
 
             // Act
-            var result = await _taskService.UpdateStatusAsync(taskId, TaskStatus.InProgress);
+            var result = await _taskService.UpdateStatusAsync(taskId, TaskStatusEnum.InProgress);
 
             // Assert
             Assert.NotNull(result);
-            Assert.Equal(TaskStatus.InProgress, result.Status);
+            Assert.Equal(TaskStatusEnum.InProgress, result.Status);
             _unitOfWorkMock.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
         }
 
         [Fact]
-        public async Task UpdateStatusAsync_FromCompleted_ShouldThrowException()
+        public async System.Threading.Tasks.Task UpdateStatusAsync_FromCompleted_ShouldThrowException()
         {
             // Arrange
             var taskId = Guid.NewGuid();
-            var task = new Domain.Entities.Task
+            var task = new TaskEntity
             {
                 Id = taskId,
                 Title = "Test Task",
-                Status = TaskStatus.Completed,
+                Status = TaskStatusEnum.Completed,
                 Priority = TaskPriority.Medium,
                 CreatedByUserId = Guid.NewGuid(),
                 CreatedAt = DateTime.UtcNow,
@@ -204,26 +207,26 @@ namespace TaskManager.Tests.Unit
 
             // Act & Assert
             await Assert.ThrowsAsync<InvalidOperationException>(() => 
-                _taskService.UpdateStatusAsync(taskId, TaskStatus.InProgress));
+                _taskService.UpdateStatusAsync(taskId, TaskStatusEnum.InProgress));
         }
 
         [Fact]
-        public async Task DeleteAsync_ShouldPerformSoftDelete()
+        public async System.Threading.Tasks.Task DeleteAsync_ShouldPerformSoftDelete()
         {
             // Arrange
             var taskId = Guid.NewGuid();
-            var task = new Domain.Entities.Task
+            var task = new TaskEntity
             {
                 Id = taskId,
                 Title = "Test Task",
-                Status = TaskStatus.Pending,
+                Status = TaskStatusEnum.Pending,
                 IsActive = true
             };
 
             _taskRepositoryMock.Setup(x => x.GetByIdAsync(taskId))
                 .ReturnsAsync(task);
-            _taskRepositoryMock.Setup(x => x.UpdateAsync(It.IsAny<Domain.Entities.Task>()))
-                .ReturnsAsync((Domain.Entities.Task t) => t);
+            _taskRepositoryMock.Setup(x => x.UpdateAsync(It.IsAny<TaskEntity>()))
+                .ReturnsAsync((TaskEntity t) => t);
             _unitOfWorkMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
                 .ReturnsAsync(1);
 
@@ -232,7 +235,7 @@ namespace TaskManager.Tests.Unit
 
             // Assert
             Assert.False(task.IsActive);
-            _taskRepositoryMock.Verify(x => x.UpdateAsync(It.IsAny<Domain.Entities.Task>()), Times.Once);
+            _taskRepositoryMock.Verify(x => x.UpdateAsync(It.IsAny<TaskEntity>()), Times.Once);
             _unitOfWorkMock.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
         }
     }
