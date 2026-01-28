@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run TaskManager.Api project",
+			"type": "shell",
+			"command": "dotnet run --project src/TaskManager.Api/TaskManager.Api.csproj",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Run TaskManager.Api project",
+			"type": "shell",
+			"command": "dotnet run --project src/TaskManager.Api/TaskManager.Api.csproj",
+			"isBackground": false,
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		}
+	]
+}
