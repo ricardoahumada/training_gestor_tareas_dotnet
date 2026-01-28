@@ -34,14 +34,12 @@ dotnet run
 Una vez que la API esté en ejecución, puedes acceder a la documentación interactiva de Swagger en:
 
 ```
-https://localhost:5001/swagger
-http://localhost:5000/swagger
+http://localhost:5000/index.html
 ```
 
 ### Endpoints principales
 
 La API está disponible en:
-- **HTTPS**: `https://localhost:5001`
 - **HTTP**: `http://localhost:5000`
 
 Rutas base de los endpoints:
