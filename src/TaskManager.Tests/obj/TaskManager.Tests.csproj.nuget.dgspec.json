@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj": {}
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj": {
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj",
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj",
         "projectName": "TaskManager.Api",
-        "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api\\obj\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj": {
-                "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj"
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api\\TaskManager.Attachments.Api.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api\\TaskManager.Attachments.Api.csproj"
+              },
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj"
               }
             }
           }
@@ -111,14 +114,14 @@
         }
       }
     },
-    "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj": {
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj",
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj",
         "projectName": "TaskManager.Application",
-        "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application\\obj\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -133,8 +136,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj": {
-                "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj"
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj"
               }
             }
           }
@@ -199,14 +202,165 @@
         }
       }
     },
-    "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj": {
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api\\TaskManager.Attachments.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj",
-        "projectName": "TaskManager.Domain",
-        "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj",
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api\\TaskManager.Attachments.Api.csproj",
+        "projectName": "TaskManager.Attachments.Api",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api\\TaskManager.Attachments.Api.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain\\obj\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj"
+              },
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure\\TaskManager.Attachments.Infrastructure.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure\\TaskManager.Attachments.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj",
+        "projectName": "TaskManager.Attachments.Application",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj",
+        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain\\TaskManager.Attachments.Domain.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain\\TaskManager.Attachments.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain\\TaskManager.Attachments.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain\\TaskManager.Attachments.Domain.csproj",
+        "projectName": "TaskManager.Attachments.Domain",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain\\TaskManager.Attachments.Domain.csproj",
+        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -257,14 +411,14 @@
         }
       }
     },
-    "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj": {
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure\\TaskManager.Attachments.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
-        "projectName": "TaskManager.Infrastructure",
-        "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure\\TaskManager.Attachments.Infrastructure.csproj",
+        "projectName": "TaskManager.Attachments.Infrastructure",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure\\TaskManager.Attachments.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\obj\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -279,8 +433,141 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj": {
-                "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj"
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application\\TaskManager.Attachments.Application.csproj"
+              },
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj",
+        "projectName": "TaskManager.Domain",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain\\TaskManager.Domain.csproj",
+        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+        "projectName": "TaskManager.Infrastructure",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\TaskManager.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application\\TaskManager.Application.csproj"
               }
             }
           }
@@ -353,14 +640,14 @@
         }
       }
     },
-    "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj": {
+    "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj",
+        "projectUniqueName": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj",
         "projectName": "TaskManager.Tests",
-        "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj",
+        "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Tests\\TaskManager.Tests.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Tests\\obj\\",
+        "outputPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -375,8 +662,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj": {
-                "projectPath": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj"
+              "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj": {
+                "projectPath": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api\\TaskManager.Api.csproj"
               }
             }
           }

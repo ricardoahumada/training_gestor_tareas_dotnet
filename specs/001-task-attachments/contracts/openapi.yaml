@@ -1,0 +1,402 @@
+openapi: 3.0.3
+info:
+  title: TaskManager - Attachments API
+  description: API para gestión de archivos adjuntos en tareas
+  version: 1.0.0
+  contact:
+    name: TaskManager Team
+    email: team@taskmanager.com
+
+servers:
+  - url: http://localhost:5000
+    description: Local development
+  - url: https://api.taskmanager.com
+    description: Production
+
+security:
+  - bearerAuth: []
+
+paths:
+  /api/v1/attachments:
+    post:
+      summary: Upload attachment to task
+      tags:
+        - Attachments
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - taskId
+                - file
+              properties:
+                taskId:
+                  type: string
+                  format: uuid
+                  example: "550e8400-e29b-41d4-a716-446655440000"
+                file:
+                  type: string
+                  format: binary
+                  description: "Archivo a subir (max 10 MB, tipos permitidos: jpg, png, gif, pdf, doc, docx, xls, xlsx)"
+      responses:
+        '201':
+          description: Archivo subido exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttachmentResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '413':
+          $ref: '#/components/responses/PayloadTooLarge'
+        '415':
+          $ref: '#/components/responses/UnsupportedMediaType'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/v1/attachments/task/{taskId}:
+    get:
+      summary: List attachments for task
+      tags:
+        - Attachments
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+      responses:
+        '200':
+          description: Lista de adjuntos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AttachmentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/v1/attachments/{id}:
+    get:
+      summary: Get attachment metadata
+      tags:
+        - Attachments
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          example: "38f7e9a2-c4d1-4f3a-9e7b-1234567890ab"
+      responses:
+        '200':
+          description: Metadata del adjunto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttachmentResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+    
+    delete:
+      summary: Delete attachment
+      description: Elimina un adjunto. Requiere ser propietario de la tarea.
+      tags:
+        - Attachments
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          example: "38f7e9a2-c4d1-4f3a-9e7b-1234567890ab"
+      responses:
+        '204':
+          description: Adjunto eliminado exitosamente
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /api/v1/attachments/{id}/download:
+    get:
+      summary: Download attachment file
+      tags:
+        - Attachments
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          example: "38f7e9a2-c4d1-4f3a-9e7b-1234567890ab"
+      responses:
+        '200':
+          description: Archivo binario
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+            image/png:
+              schema:
+                type: string
+                format: binary
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+            application/msword:
+              schema:
+                type: string
+                format: binary
+            application/vnd.openxmlformats-officedocument.wordprocessingml.document:
+              schema:
+                type: string
+                format: binary
+            application/vnd.ms-excel:
+              schema:
+                type: string
+                format: binary
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                type: string
+                format: binary
+          headers:
+            Content-Disposition:
+              description: Attachment filename
+              schema:
+                type: string
+                example: 'attachment; filename="screenshot.jpg"'
+            Content-Type:
+              description: File MIME type
+              schema:
+                type: string
+                example: "image/jpeg"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '410':
+          description: Archivo eliminado (tarea inactiva)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: "JWT token obtenido de /api/v1/auth/login"
+
+  schemas:
+    AttachmentResponse:
+      type: object
+      required:
+        - id
+        - taskId
+        - fileName
+        - fileSize
+        - contentType
+        - uploadedAt
+        - uploadedByUserId
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "38f7e9a2-c4d1-4f3a-9e7b-1234567890ab"
+        taskId:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        fileName:
+          type: string
+          maxLength: 255
+          example: "screenshot.jpg"
+        fileSize:
+          type: integer
+          format: int64
+          minimum: 1
+          maximum: 10485760
+          example: 2048000
+          description: "Tamaño en bytes"
+        contentType:
+          type: string
+          maxLength: 200
+          example: "image/jpeg"
+          enum:
+            - "image/jpeg"
+            - "image/png"
+            - "image/gif"
+            - "application/pdf"
+            - "application/msword"
+            - "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            - "application/vnd.ms-excel"
+            - "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        uploadedAt:
+          type: string
+          format: date-time
+          example: "2026-01-29T14:30:00Z"
+          description: "UTC timestamp ISO 8601"
+        uploadedByUserId:
+          type: string
+          format: uuid
+          example: "6ba7b810-9dad-11d1-80b4-00c04fd430c8"
+
+    ErrorResponse:
+      type: object
+      required:
+        - statusCode
+        - message
+      properties:
+        statusCode:
+          type: integer
+          example: 400
+        message:
+          type: string
+          example: "El archivo debe ser entre 1 byte y 10 MB"
+        details:
+          type: string
+          nullable: true
+          example: "File size: 15728640 bytes (15 MB) exceeds maximum allowed: 10485760 bytes (10 MB)"
+
+  responses:
+    BadRequest:
+      description: Bad Request - Validación fallida
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          examples:
+            taskInactive:
+              summary: Tarea inactiva
+              value:
+                statusCode: 400
+                message: "No se pueden adjuntar archivos a tareas inactivas"
+                details: "TaskId: 550e8400-e29b-41d4-a716-446655440000, IsActive: false"
+            maxAttachments:
+              summary: Límite de adjuntos alcanzado
+              value:
+                statusCode: 400
+                message: "La tarea ya tiene el máximo de 5 adjuntos permitidos"
+                details: "TaskId: 550e8400-e29b-41d4-a716-446655440000, Current attachments: 5"
+            invalidFile:
+              summary: Archivo inválido
+              value:
+                statusCode: 400
+                message: "El archivo debe ser entre 1 byte y 10 MB"
+                details: null
+
+    Unauthorized:
+      description: Unauthorized - Token JWT inválido o ausente
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            statusCode: 401
+            message: "Token JWT inválido o ausente"
+            details: null
+
+    Forbidden:
+      description: Forbidden - Usuario no autorizado
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            statusCode: 403
+            message: "Solo el propietario de la tarea puede eliminar adjuntos"
+            details: "TaskOwnerId: 6ba7b810-9dad-11d1-80b4-00c04fd430c8, RequestUserId: 7c9e6679-7425-40de-944b-e07fc1f90ae7"
+
+    NotFound:
+      description: Not Found - Recurso no encontrado
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          examples:
+            taskNotFound:
+              summary: Tarea no encontrada
+              value:
+                statusCode: 404
+                message: "Tarea no encontrada"
+                details: "TaskId: 550e8400-e29b-41d4-a716-446655440000"
+            attachmentNotFound:
+              summary: Adjunto no encontrado
+              value:
+                statusCode: 404
+                message: "Adjunto no encontrado"
+                details: "AttachmentId: 38f7e9a2-c4d1-4f3a-9e7b-1234567890ab"
+
+    PayloadTooLarge:
+      description: Payload Too Large - Archivo excede 10 MB
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            statusCode: 413
+            message: "El archivo excede el tamaño máximo permitido de 10 MB"
+            details: "Received: 15 MB"
+
+    UnsupportedMediaType:
+      description: Unsupported Media Type - Tipo de archivo no permitido
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            statusCode: 415
+            message: "Tipo de archivo no permitido"
+            details: "ContentType: application/x-executable. Permitidos: image/jpeg, image/png, image/gif, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+          example:
+            statusCode: 500
+            message: "Error interno del servidor al procesar el archivo"
+            details: "IOException: Disk full"
+
+tags:
+  - name: Attachments
+    description: Gestión de archivos adjuntos en tareas

@@ -16,6 +16,7 @@ using TaskManager.Domain.Interfaces;
 using TaskManager.Infrastructure.Data;
 using TaskManager.Infrastructure.Repositories;
 using TaskManager.Infrastructure.Services;
+using TaskManager.Attachments.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -91,6 +92,9 @@ builder.Services.AddMemoryCache();
 // Inyección de dependencias - Validadores
 builder.Services.AddValidatorsFromAssemblyContaining<CreateTaskValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterValidator>();
+
+// Registrar módulo de adjuntos (Strangler Pattern)
+builder.Services.AddAttachmentsModule(builder.Configuration);
 
 var app = builder.Build();
 

@@ -400,3 +400,13 @@ FodyWeavers.xsd
 
 **/bin
 **/obj
+**/*.log.1
+**/*.log.*
+*.log
+*.db
+.vs/
+Publish/
+
+# Uploaded files (attachments feature)
+uploads/
+!uploads/.gitkeep

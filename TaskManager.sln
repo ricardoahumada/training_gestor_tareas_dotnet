@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
@@ -12,6 +12,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Api", "src\TaskManager.Api\TaskManager.Api.csproj", "{D1234567-1234-1234-1234-123456789015}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Tests", "src\TaskManager.Tests\TaskManager.Tests.csproj", "{E1234567-1234-1234-1234-123456789016}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B76285E-D16B-47D4-86AF-A47BE6096429}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskManager.Attachments", "TaskManager.Attachments", "{883FEDE7-B481-46C3-B4FB-ED5A2575DD0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Attachments.Domain", "src\TaskManager.Attachments\TaskManager.Attachments.Domain\TaskManager.Attachments.Domain.csproj", "{E6AF3161-9372-4748-A53A-F21684F02FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Attachments.Application", "src\TaskManager.Attachments\TaskManager.Attachments.Application\TaskManager.Attachments.Application.csproj", "{37EA0CD4-F949-4785-BAC1-1BAA9CCC3740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Attachments.Infrastructure", "src\TaskManager.Attachments\TaskManager.Attachments.Infrastructure\TaskManager.Attachments.Infrastructure.csproj", "{9964C4E4-7727-4B02-B214-85AE471AAFA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Attachments.Api", "src\TaskManager.Attachments\TaskManager.Attachments.Api\TaskManager.Attachments.Api.csproj", "{892D907A-F2C7-4E0E-B42A-6C56BFAAEAE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E75EFFF-15C3-4592-899E-D876EA9D13B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Attachments.Tests", "tests\TaskManager.Attachments.Tests\TaskManager.Attachments.Tests.csproj", "{8AEFFF23-2599-46DD-A948-A68C8464FA6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,5 +55,33 @@ Global
 		{E1234567-1234-1234-1234-123456789016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1234567-1234-1234-1234-123456789016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1234567-1234-1234-1234-123456789016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6AF3161-9372-4748-A53A-F21684F02FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6AF3161-9372-4748-A53A-F21684F02FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6AF3161-9372-4748-A53A-F21684F02FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6AF3161-9372-4748-A53A-F21684F02FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EA0CD4-F949-4785-BAC1-1BAA9CCC3740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EA0CD4-F949-4785-BAC1-1BAA9CCC3740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EA0CD4-F949-4785-BAC1-1BAA9CCC3740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EA0CD4-F949-4785-BAC1-1BAA9CCC3740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9964C4E4-7727-4B02-B214-85AE471AAFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9964C4E4-7727-4B02-B214-85AE471AAFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9964C4E4-7727-4B02-B214-85AE471AAFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9964C4E4-7727-4B02-B214-85AE471AAFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892D907A-F2C7-4E0E-B42A-6C56BFAAEAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892D907A-F2C7-4E0E-B42A-6C56BFAAEAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892D907A-F2C7-4E0E-B42A-6C56BFAAEAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892D907A-F2C7-4E0E-B42A-6C56BFAAEAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AEFFF23-2599-46DD-A948-A68C8464FA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEFFF23-2599-46DD-A948-A68C8464FA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEFFF23-2599-46DD-A948-A68C8464FA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEFFF23-2599-46DD-A948-A68C8464FA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{883FEDE7-B481-46C3-B4FB-ED5A2575DD0F} = {2B76285E-D16B-47D4-86AF-A47BE6096429}
+		{E6AF3161-9372-4748-A53A-F21684F02FD5} = {883FEDE7-B481-46C3-B4FB-ED5A2575DD0F}
+		{37EA0CD4-F949-4785-BAC1-1BAA9CCC3740} = {883FEDE7-B481-46C3-B4FB-ED5A2575DD0F}
+		{9964C4E4-7727-4B02-B214-85AE471AAFA6} = {883FEDE7-B481-46C3-B4FB-ED5A2575DD0F}
+		{892D907A-F2C7-4E0E-B42A-6C56BFAAEAE4} = {883FEDE7-B481-46C3-B4FB-ED5A2575DD0F}
+		{8AEFFF23-2599-46DD-A948-A68C8464FA6A} = {6E75EFFF-15C3-4592-899E-D876EA9D13B5}
 	EndGlobalSection
 EndGlobal

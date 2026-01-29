@@ -1,6 +1,10 @@
 {
-  "TaskManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Api",
-  "TaskManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Application",
-  "TaskManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Domain",
-  "TaskManager.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\gestor_tareas_dotnet\\src\\TaskManager.Infrastructure"
+  "TaskManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Api",
+  "TaskManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Application",
+  "TaskManager.Attachments.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Api",
+  "TaskManager.Attachments.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Application",
+  "TaskManager.Attachments.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Domain",
+  "TaskManager.Attachments.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Attachments\\TaskManager.Attachments.Infrastructure",
+  "TaskManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Domain",
+  "TaskManager.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Shared\\MyTrainingRepos\\morning-training_gestor_tareas_dotnet\\src\\TaskManager.Infrastructure"
 }

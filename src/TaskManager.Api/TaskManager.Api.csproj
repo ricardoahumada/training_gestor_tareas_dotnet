@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TaskManager.Infrastructure\TaskManager.Infrastructure.csproj" />
+    <ProjectReference Include="..\TaskManager.Attachments\TaskManager.Attachments.Api\TaskManager.Attachments.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
