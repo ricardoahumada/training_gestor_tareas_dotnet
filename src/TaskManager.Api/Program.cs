@@ -86,6 +86,8 @@ builder.Services.AddSingleton<ITaskNotifier, TaskNotifier>();
 builder.Services.AddSingleton<CacheService>();
 builder.Services.AddSingleton<DateTimeProvider>();
 
+builder.Services.AddMemoryCache();
+
 // Inyección de dependencias - Validadores
 builder.Services.AddValidatorsFromAssemblyContaining<CreateTaskValidator>();
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterValidator>();
